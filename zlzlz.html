@@ -200,6 +200,7 @@
         <li><a href="#map">地图</a></li>
       </ul>
     </div>
+    <div style="background: red; height: 35vh"></div>
     <div id="heading">
       <h1>迁安筑力租赁站</h1>
       <div></div>
@@ -244,9 +245,9 @@
   <section>
     <div class="content">
       <h1 id=tel>联系我们</h1>
-      <div><a style="font-size: 20px;font-weight: 600; text-decoration: none" href="tel:123456789">王经理: 123456789</a></div>
-      <div style="margin-top: 10px; "><a style="font-size: 20px;font-weight: 600; text-decoration: none" href="tel:123456789">蔡经理:
-          123456789</a></div>
+      <div><a style="font-size: 20px;font-weight: 600; text-decoration: none" href="tel:13400457746">王经理: 13400457746</a></div>
+      <div style="margin-top: 10px; "><a style="font-size: 20px;font-weight: 600; text-decoration: none" href="tel:18331545123">蔡经理:
+          18331545123</a></div>
     </div>
   </section>
 
@@ -255,13 +256,15 @@
 </body>
 <script src="https://webapi.amap.com/maps?v=1.4.10&key=de701c29e7e967f146cdf9028effa6de&plugin=AMap.Autocomplete"></script>
 <script>
+  var lg = 118.713278;
+  var la = 40.038695;
   var map = new AMap.Map("map", {
     resizeEnable: true, //是否监控地图容器尺寸变化
     zoom: 13, //初始化地图层级
-    center: [118.713278, 40.038695] //初始化地图中心点
+    center: [lg, la] //初始化地图中心点
   });
   var marker = new AMap.Marker({
-    position: [118.713278, 40.038695],
+    position: [lg, la],
   });
   marker.setTitle("迁安筑力租赁站");
   marker.setLabel({
@@ -270,7 +273,8 @@
   });
   marker.setClickable(true);
   AMap.event.addListener(marker, "click", function () {
-    marker.setzIndex(marker.getzIndex() + 100);
+    // marker.setzIndex(marker.getzIndex() + 100);
+    window,location.href = "https://uri.amap.com/marker?position" + lg + "," + la
   });
   map.add(marker);
 </script>
