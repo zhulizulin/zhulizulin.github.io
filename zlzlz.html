@@ -19,7 +19,7 @@
   }
 
   section {
-    min-height: 50%;
+    min-height: 30%;
   }
 
   section:not(:last-child) {
@@ -126,7 +126,7 @@
     border: 1px solid #efefef;
     border-bottom: 1px solid #ddd;
     border-radius: 2px;
-    padding: 25px;
+    padding: 15px;
     background: rgba(255, 255, 255, .95);
     box-shadow: 0 1px 3px 0 #eee;
     white-space: nowrap;
@@ -139,7 +139,7 @@
   #menu ul li a {
     display: block;
     text-decoration: none;
-    padding: 3px 0;
+    padding: 5px 0;
   }
 
   #menu ul li a:hover {
@@ -177,6 +177,11 @@
   #logo img {
     display: none;
   }
+
+  #map {
+    width: 100%;
+    height: 100vw;
+  }
 </style>
 
 <body>
@@ -192,6 +197,7 @@
         <li><a href="#gangguan">钢管</a></li>
         <li><a href="#case">工程案例</a></li>
         <li><a href="#tel">联系我们</a></li>
+        <li><a href="#map">地图</a></li>
       </ul>
     </div>
     <div id="heading">
@@ -239,9 +245,34 @@
     <div class="content">
       <h1 id=tel>联系我们</h1>
       <div><a style="font-size: 20px;font-weight: 600; text-decoration: none" href="tel:123456789">王经理: 123456789</a></div>
-      <div style="margin-top: 10px; "><a style="font-size: 20px;font-weight: 600; text-decoration: none" href="tel:123456789">蔡经理: 123456789</a></div>
+      <div style="margin-top: 10px; "><a style="font-size: 20px;font-weight: 600; text-decoration: none" href="tel:123456789">蔡经理:
+          123456789</a></div>
     </div>
   </section>
+
+  <div id="map"></div>
+  <div style="height: 50px"></div>
 </body>
+<script src="https://webapi.amap.com/maps?v=1.4.10&key=de701c29e7e967f146cdf9028effa6de&plugin=AMap.Autocomplete"></script>
+<script>
+  var map = new AMap.Map("map", {
+    resizeEnable: true, //是否监控地图容器尺寸变化
+    zoom: 13, //初始化地图层级
+    center: [118.713278, 40.038695] //初始化地图中心点
+  });
+  var marker = new AMap.Marker({
+    position: [118.713278, 40.038695],
+  });
+  marker.setTitle("迁安筑力租赁站");
+  marker.setLabel({
+    offset: new AMap.Pixel(20, 20),
+    content: "迁安筑力租赁站"
+  });
+  marker.setClickable(true);
+  AMap.event.addListener(marker, "click", function () {
+    marker.setzIndex(marker.getzIndex() + 100);
+  });
+  map.add(marker);
+</script>
 
 </html>
