@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <title>迁安筑力租赁站</title>
 </head>
 <style>
@@ -67,28 +67,6 @@
     text-align: left;
   }
 
-  #top {
-    height: 50%;
-  }
-
-  #heading {
-    -webkit-user-select: none;
-    position: absolute;
-    top: 50%;
-    margin-top: -150px;
-    text-align: center;
-    width: 100%;
-  }
-
-  #logo {
-    font: 150px 'Italiana', sans-serif;
-    text-transform: lowercase;
-  }
-
-  #tagline {
-    font-size: 16px;
-  }
-
   #menu {
     position: fixed;
     top: 195px;
@@ -96,15 +74,12 @@
     z-index: 50;
   }
 
-  #menu:hover ul {
+  #menu-cb:checked ~ ul {
     display: block;
   }
 
-  #menu a {
-    color: inherit;
-  }
 
-  #menu a#toggle {
+  .icon-menu {
     position: absolute;
     top: 0;
     right: 0;
@@ -113,11 +88,6 @@
     border-radius: 2px;
     border: 1px solid transparent;
     z-index: 5;
-  }
-
-  #menu:hover a#toggle {
-    border: 1px solid #efefef;
-    border-bottom: none;
   }
 
   #menu ul {
@@ -145,9 +115,6 @@
     padding: 5px 0;
   }
 
-  #menu ul li a:hover {
-    text-decoration: underline;
-  }
 
   @media screen and (max-width: 700px) {
     section:not(#top) {
@@ -172,6 +139,17 @@
       font-size: 16px;
     }
   }
+  .float-phone {
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+  }
+  .float-phone img{
+    width: 100%;
+    height: 100%;;
+  }
 
   #logo {
     margin-bottom: 0;
@@ -191,9 +169,8 @@
 <body>
   <section id="top">
     <div id="menu">
-      <a id="toggle" href="#">
-        <i class="icon-menu">=</i>
-      </a>
+      <label for="menu-cb" class="icon-menu">三</label>
+      <input style="display: none" type="checkbox" id="menu-cb"/>
       <ul>
         <li><a href="#introduction">简介</a></li>
         <li><a href="#dingtuo">顶托</a></li>
@@ -207,7 +184,7 @@
     </div>
     <div style="background: red; height: 35vh; color: #ffffff; font-weight: 700; font-size: 20px; line-height: 40px; padding: 25px; box-sizing: border-box">
         脚手架，钢管、扣件、油托、木架板、横立杆、龙扣、盘扣、吊篮、路盖板</div>
-    <div id="heading">
+    <div style="text-align: center; margin-top: 25px;">
       <h1>迁安筑力租赁站</h1>
       <div></div>
     </div>
@@ -273,6 +250,7 @@
 
   <div id="map"></div>
   <div style="height: 50px"></div>
+  <div class="float-phone"><a href="tel:13400457746"><img src="./zlz/ic_float_tel.png"/></a></div>
 </body>
 <script src="https://webapi.amap.com/maps?v=1.4.10&key=de701c29e7e967f146cdf9028effa6de&plugin=AMap.Autocomplete"></script>
 <script>
