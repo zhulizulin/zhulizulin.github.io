@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
   <meta name="description" content="专业租赁建筑材料">
@@ -14,6 +14,7 @@
   * {
     box-sizing: border-box;
   }
+
   body,
   html {
     margin: 0;
@@ -78,7 +79,7 @@
     z-index: 50;
   }
 
-  #menu-cb:checked ~ ul {
+  #menu-cb:checked~ul {
     display: block;
   }
 
@@ -143,6 +144,7 @@
       font-size: 16px;
     }
   }
+
   .float-phone {
     height: 60px;
     width: 60px;
@@ -150,9 +152,11 @@
     right: 15px;
     bottom: 15px;
   }
-  .float-phone img{
+
+  .float-phone img {
     width: 100%;
-    height: 100%;;
+    height: 100%;
+    ;
   }
 
   #logo {
@@ -166,7 +170,7 @@
   #map {
     width: 100%;
     height: 100vw;
-    
+
   }
 </style>
 
@@ -178,24 +182,42 @@
   <section id="top">
     <div id="menu">
       <label for="menu-cb" class="icon-menu">三</label>
-      <input style="display: none" type="checkbox" id="menu-cb"/>
+      <input style="display: none" type="checkbox" id="menu-cb" />
       <ul>
         <li><a href="#introduction">简介</a></li>
-        <li><a href="#dingtuo">顶托</a></li>
-        <li><a href="#koujian">扣件</a></li>
         <li><a href="#gangguan">钢管</a></li>
-        <li><a href="#scaffold">脚手架</a></li>
+        <li><a href="#koujian">扣件</a></li>
+        <li><a href="#mutiaoban">木跳板</a></li>
+        <li><a href="#gangtiaoban">钢跳板</a></li>
+        <li><a href="#moban">模板</a></li>
+        <li><a href="#kagou">卡勾</a></li>
+        <li><a href="#scaffold">移动脚手架</a></li>
         <li><a href="#case">工程案例</a></li>
         <li><a href="#tel">联系我们</a></li>
         <li><a href="#map">地图</a></li>
       </ul>
     </div>
-    <div style="background: red; height: 250px; color: #ffffff; font-weight: 700; font-size: 20px; line-height: 40px; padding: 25px; box-sizing: border-box">
-        脚手架，钢管、扣件、油托、木架板、横立杆、龙扣、盘扣、吊篮、路盖板</div>
-    <div style="text-align: center; margin-top: 25px;">
+    <div style="background: #f84734; height: 250px; color: #ffffff; font-weight: 700; font-size: 20px; line-height: 40px; padding: 25px; box-sizing: border-box">
+      <div style="font-size: 33px;line-height: 1.8">迁安市筑力租赁站</div>
+      <div style="max-width: 500px">
+        <span style="display: inline-block;width: 30%"><a href="#gangguan" style="text-decoration: none; color: white">钢管</a></span>
+        <span style="display: inline-block;width: 30%; text-align: center"><a href="#koujian" style="text-decoration: none; color: white">扣件</a></span>
+        <span style="display: inline-block;width: 30%;text-align: right"><a href="#mutiaoban" style="text-decoration: none; color: white">木跳板</a></span>
+      </div>
+      <div style="max-width: 500px">
+        <span style="display: inline-block;width: 30%"><a href="#gangtiaoban" style="text-decoration: none; color: white">钢跳板</a></span>
+        <span style="display: inline-block;width: 30%; text-align: center"><a href="#moban" style="text-decoration: none; color: white">模板</a></span>
+        <span style="display: inline-block;width: 30%; text-align: right"><a href="#kagou" style="text-decoration: none; color: white">卡勾</a></span>
+      </div>
+      <div style="max-width: 500px">
+        <span style="display: inline-block;width: 45%"><a href="#scaffold" style="text-decoration: none; color: white">移动脚手架</a></span>
+        <span style="display: inline-block;width: 45%; text-align: right">出租出售</span>
+      </div>
+    </div>
+    <!-- <div style="text-align: center; margin-top: 25px;">
       <h1>迁安筑力租赁站</h1>
       <div></div>
-    </div>
+    </div> -->
   </section>
   <section>
     <div class="content">
@@ -205,38 +227,61 @@
     </div>
   </section>
 
-  <section>
-    <div class="content">
-      <h1 id=dingtuo>顶托</h1>
-      <img src="./zlz/dingtuo/1.jpg" alt="">
-      <img src="./zlz/dingtuo/2.jpg" alt="">
-      <img src="./zlz/dingtuo/3.jpg" alt="">
-      <img src="./zlz/dingtuo/4.jpg" alt="">
-      <img src="./zlz/dingtuo/5.jpg" alt="">
-    </div>
-  </section>
-  <section>
-    <div class="content">
-      <h1 id=koujian>扣件</h1>
-      <img src="./zlz/koujian/2.jpg" alt="">
-      <img src="./zlz/koujian/3.jpg" alt="">
-      <img src="./zlz/koujian/4.jpg" alt="">
-    </div>
-  </section>
+
   <section>
     <div class="content">
       <h1 id=gangguan>钢管</h1>
       <img src="./zlz/gangguan/1.jpg" alt="">
       <img src="./zlz/gangguan/2.jpg" alt="">
+      <img src="./zlz/gangguan/3.jpg" alt="">
     </div>
   </section>
   <section>
-      <div class="content">
-        <h1 id=scaffold>脚手架</h1>
-        <img src="./zlz/jiaoshoujia/1.jpg" alt="">
-      </div>
-    </section>
-  
+    <div class="content">
+      <h1 id=koujian>扣件</h1>
+      <img src="./zlz/koujian/1.jpg" alt="">
+      <img src="./zlz/koujian/2.jpg" alt="">
+      <img src="./zlz/koujian/3.jpg" alt="">
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <h1 id=mutiaoban>木跳板</h1>
+      <img src="./zlz/mutiaoban/1.jpg" alt="">
+      <img src="./zlz/mutiaoban/2.jpg" alt="">
+      <img src="./zlz/mutiaoban/3.jpg" alt="">
+    </div>
+  </section>
+  <section>
+    <div class="content">
+      <h1 id=gangtiaoban>钢跳板</h1>
+      <img src="./zlz/gangtiaoban/2.jpg" alt="">
+      <img src="./zlz/gangtiaoban/3.jpg" alt="">
+      <img src="./zlz/gangtiaoban/4.jpg" alt="">
+    </div>
+  </section>
+  <section>
+    <div class="content">
+      <h1 id=moban>模板</h1>
+      <img src="./zlz/koujian/1.jpg" alt="">
+      <img src="./zlz/koujian/2.jpg" alt="">
+    </div>
+  </section>
+  <section>
+    <div class="content">
+      <h1 id=kagou>卡勾</h1>
+      <img src="./zlz/kagou/1.jpg" alt="">
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <h1 id=scaffold>移动脚手架</h1>
+      <img src="./zlz/jiaoshoujia/1.jpg" alt="">
+    </div>
+  </section>
+
   <section>
     <div class="content">
       <h1 id=case>工程案例</h1>
@@ -250,20 +295,22 @@
       <h1 id=tel>联系我们</h1>
       <div><a style="font-size: 20px;font-weight: 600; text-decoration: none" href="tel:13400457746">王经理: 13400457746</a></div>
       <div style="margin-top: 10px; "><a style="font-size: 20px;font-weight: 600; text-decoration: none" href="tel:18331545123">蔡经理:
-          18331545123</a></div>
+          18331545123
+        </a></div>
       <div style="margin-top: 10px; "><a style="font-size: 20px;font-weight: 600; text-decoration: none" href="tel:186 1194 2888">王经理:
-          18611942888</a></div>
+          18611942888
+        </a></div>
     </div>
   </section>
 
   <div id="map"></div>
   <div style="height: 50px"></div>
-  <div class="float-phone"><a href="tel:13400457746"><img src="./zlz/ic_float_tel.png"/></a></div>
+  <div class="float-phone"><a href="tel:13400457746"><img src="./zlz/ic_float_tel.png" /></a></div>
 </body>
 <script src="https://webapi.amap.com/maps?v=1.4.10&key=de701c29e7e967f146cdf9028effa6de&plugin=AMap.Autocomplete"></script>
 <script>
-  var lg = 118.713278;
-  var la = 40.038695;
+  var lg = 118.706019;
+  var la = 40.039329;
   var map = new AMap.Map("map", {
     resizeEnable: true, //是否监控地图容器尺寸变化
     zoom: 13, //初始化地图层级
@@ -280,7 +327,7 @@
   marker.setClickable(true);
   AMap.event.addListener(marker, "click", function () {
     // marker.setzIndex(marker.getzIndex() + 100);
-    window,location.href = "https://uri.amap.com/marker?position=" + lg + "," + la
+    window, location.href = "https://uri.amap.com/marker?position=" + lg + "," + la
   });
   map.add(marker);
 </script>
