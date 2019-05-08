@@ -49,6 +49,7 @@
     line-height: 1.4;
     font-size: 16px
   }
+
   .pc-header {
     display: none;
     text-align: left;
@@ -67,6 +68,7 @@
     vertical-align: top;
     color: #ffffff;
   }
+
   .pc-header-item-on {
     height: 50px;
     line-height: 50px;
@@ -78,61 +80,63 @@
     background: #FFFFFF;
     color: #ff9e18;
   }
-/**phone*/
-@media screen and (min-width:320px) and (max-width:767px) {}
+
+  /**phone*/
+  @media screen and (min-width:320px) and (max-width:767px) {}
 
 
-/**pad*/
-@media screen and (min-width:768px) and (max-width:1024px) {
-  body {
-    text-align: center;
+  /**pad*/
+  @media screen and (min-width:768px) and (max-width:1024px) {
+    body {
+      text-align: center;
 
+    }
+
+    .container {
+      display: inline-block;
+      width: 80%;
+    }
+
+    .product-header {
+      display: none
+    }
+
+    .product-item {
+      width: 33.33%;
+    }
   }
 
-  .container {
-    display: inline-block;
-    width: 80%;
-  }
+  /**pc*/
+  @media screen and (min-width: 1024px) {
+    body {
+      text-align: center;
+    }
 
-  .product-header {
-    display: none
-  }
+    .container {
+      display: inline-block;
+      width: 80%;
+    }
 
-  .product-item {
-    width: 33.33%;
-  }
-}
+    .product-header {
+      display: none
+    }
 
-/**pc*/
-@media screen and (min-width: 1024px) {
-  body {
-    text-align: center;
-  }
+    .pc-header {
+      display: block
+    }
 
-  .container {
-    display: inline-block;
-    width: 80%;
-  }
+    .bottom-nav {
+      display: none
+    }
 
-  .product-header {
-    display: none
-  }
+    .product-item {
+      width: 25%;
+    }
 
-  .pc-header {
-    display: block
+    section {
+      text-align: left;
+    }
   }
-
-  .bottom-nav {
-    display: none
-  }
-
-  .product-item {
-    width: 25%;
-  }
-  section {
-    text-align: left;
-  }
-}
 </style>
 
 <body>
@@ -140,7 +144,7 @@
     <a class="pc-header-item" href="./index.html">首页</a>
     <a class="pc-header-item" href="tel:13400457746">电话</a>
     <a class="pc-header-item" href="./address.html">地图</a>
-    <a class="pc-header-item-on" >关于</a>
+    <a class="pc-header-item-on">关于</a>
   </div>
   <div class="title">筑力建筑设备租赁</div>
   <section>
