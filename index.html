@@ -19,6 +19,8 @@
   html {
     margin: 0;
     padding: 0;
+    -webkit-text-size-adjust: none;
+    min-width: 320px;
   }
 
   a {
@@ -26,9 +28,12 @@
     cursor: pointer;
     text-decoration: none;
   }
-  a:linked, a:visited {
+
+  a:linked,
+  a:visited {
     color: auto;
   }
+
   .welcome {
     height: 30px;
     line-height: 30px;
@@ -36,7 +41,9 @@
     color: #909090;
     padding-left: 15px;
     border-bottom: solid 1px #f2f2f2;
+    text-align: left;
   }
+
   .title {
     height: 50px;
     line-height: 50px;
@@ -56,6 +63,7 @@
     line-height: 1.4;
     font-size: 16px
   }
+
   .product-header {
     text-align: center;
     background: url("./assets/product_title_bg.jpg") center bottom;
@@ -66,26 +74,62 @@
     font-size: 18px;
     margin: 0 15px;
   }
+
+  .pc-header {
+    display: none;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-left: 15px;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .pc-header-item {
+    height: 50px;
+    line-height: 50px;
+    width: 80px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    color: #ffffff;
+  }
+
+  .pc-header-item-on {
+    height: 50px;
+    line-height: 50px;
+    width: 80px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    color: #ffffff;
+    background: #FFFFFF;
+    color: #ff9e18;
+  }
+
   .product {
     padding: 7.5px;
     overflow: hidden;
   }
+
   .product-item {
     padding: 7.5px;
     float: left;
     width: 50%
   }
+
   .card {
     background: #FFFFFF;
     border-radius: 4px;
     box-shadow: 1px 1px 1px #f2f2f2, -1px -1px 1px #f2f2f2;
   }
+
   .card-thumb-wrap {
     position: relative;
     width: 100%;
     height: 0;
     padding-top: 100%;
   }
+
   .card-thumb-wrap>img {
     width: 100%;
     height: 100%;
@@ -95,6 +139,7 @@
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
   }
+
   .product-title {
     text-align: center;
     line-height: 1.4;
@@ -103,89 +148,152 @@
     color: #333333;
   }
 
+
+  /**phone*/
+  @media screen and (min-width:320px) and (max-width:767px) {}
+
+
+  /**pad*/
+  @media screen and (min-width:768px) and (max-width:1024px) {
+    body {
+      text-align: center;
+
+    }
+
+    .container {
+      display: inline-block;
+      width: 80%;
+    }
+
+    .product-header {
+      display: none
+    }
+
+    .product-item {
+      width: 33.33%;
+    }
+  }
+
+  /**pc*/
+  @media screen and (min-width: 1024px) {
+    body {
+      text-align: center;
+    }
+
+    .container {
+      display: inline-block;
+      width: 80%;
+    }
+
+    .product-header {
+      display: none
+    }
+
+    .pc-header {
+      display: block
+    }
+
+    .bottom-nav {
+      display: none
+    }
+
+    .product-item {
+      width: 25%;
+    }
+  }
 </style>
 
 <body>
+
   <div class="welcome">您好，欢迎光临迁安市筑力租赁站！</div>
-  <div class="title">筑力建筑设备租赁</div>
+  <div class="container">
+    <div class="pc-header">
+      <a class="pc-header-item-on">首页</a>
+      <a class="pc-header-item" href="tel:13400457746">电话</a>
+      <a class="pc-header-item" href="./address.html">地图</a>
+      <a class="pc-header-item" href="./about.html">关于</a>
+    </div>
+    <div class="title">筑力建筑设备租赁</div>
 
-  <div class="product-header">产品展示</div>
+    <div class="product-header">产品展示</div>
 
-  <div class="product">
-    <a class="product-item">
-      <div class="card">
-        <div class="card-thumb-wrap">
-          <img src="./assets/gangguan/1.jpg">
+
+
+    <div class="product">
+      <a class="product-item">
+        <div class="card">
+          <div class="card-thumb-wrap">
+            <img src="./assets/gangguan/1.jpg">
+          </div>
+          <div class="product-title">钢管</div>
         </div>
-        <div class="product-title">钢管</div>
-      </div>
-    </a>
-    <a class="product-item">
-      <div class="card">
-        <div class="card-thumb-wrap">
-          <img src="./assets/koujian/1.jpg">
+      </a>
+      <a class="product-item">
+        <div class="card">
+          <div class="card-thumb-wrap">
+            <img src="./assets/koujian/1.jpg">
+          </div>
+          <div class="product-title">扣件</div>
         </div>
-        <div class="product-title">扣件</div>
-      </div>
-    </a>
-    <a class="product-item">
-      <div class="card">
-        <div class="card-thumb-wrap">
-          <img src="./assets/mutiaoban/1.jpg">
+      </a>
+      <a class="product-item">
+        <div class="card">
+          <div class="card-thumb-wrap">
+            <img src="./assets/mutiaoban/1.jpg">
+          </div>
+          <div class="product-title">木跳板</div>
         </div>
-        <div class="product-title">木跳板</div>
-      </div>
-    </a>
-    <a class="product-item">
-      <div class="card">
-        <div class="card-thumb-wrap">
-          <img src="./assets/gangtiaoban/1.jpg">
+      </a>
+      <a class="product-item">
+        <div class="card">
+          <div class="card-thumb-wrap">
+            <img src="./assets/gangtiaoban/1.jpg">
+          </div>
+          <div class="product-title">钢跳板</div>
         </div>
-        <div class="product-title">钢跳板</div>
-      </div>
-    </a>
-    <a class="product-item">
-      <div class="card">
-        <div class="card-thumb-wrap">
-          <img src="./assets/kagou/1.jpg">
+      </a>
+      <a class="product-item">
+        <div class="card">
+          <div class="card-thumb-wrap">
+            <img src="./assets/kagou/1.jpg">
+          </div>
+          <div class="product-title">卡勾</div>
         </div>
-        <div class="product-title">卡勾</div>
-      </div>
-    </a>
-    <a class="product-item">
-      <div class="card">
-        <div class="card-thumb-wrap">
-          <img src="./assets/jiaoshoujia/1.jpg">
+      </a>
+      <a class="product-item">
+        <div class="card">
+          <div class="card-thumb-wrap">
+            <img src="./assets/jiaoshoujia/1.jpg">
+          </div>
+          <div class="product-title">移动脚手架</div>
         </div>
-        <div class="product-title">移动脚手架</div>
-      </div>
-    </a>
-    <a class="product-item">
-      <div class="card">
-        <div class="card-thumb-wrap">
-          <img src="./assets/case/1.jpg">
+      </a>
+      <a class="product-item">
+        <div class="card">
+          <div class="card-thumb-wrap">
+            <img src="./assets/case/1.jpg">
+          </div>
+          <div class="product-title">工程案例</div>
         </div>
-        <div class="product-title">工程案例</div>
-      </div>
-    </a>
+      </a>
+    </div>
   </div>
-  
   <div style="height: 50px"></div>
   <div class="bottom-nav">
     <a class="nav-item">
-      <img src="./assets/ic_home_on.png"/>
+      <img src="./assets/ic_home_on.png" />
       <div class="nav-text-on">首页</div>
     </a>
     <a class="nav-item" href="tel:13400457746">
-      <img src="./assets/ic_phone.png"/>
+      <img src="./assets/ic_phone.png" />
       <div class="nav-text">电话</div>
     </a>
     <a class="nav-item" href="./address.html">
-      <img src="./assets/ic_address.png"/>
+      <img src="./assets/ic_address.png" />
       <div class="nav-text">地图</div>
     </a>
     <a class="nav-item" href="./about.html">
-      <img src="./assets/ic_about.png"/>
+      <img src="./assets/ic_about.png" />
       <div class="nav-text">关于</div>
     </a>
   </div>
@@ -200,6 +308,7 @@
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 10000;
   }
+
   .nav-item {
     float: left;
     width: 25%;
@@ -208,13 +317,16 @@
     height: 100%;
     border-left: solid 1px rgba(0, 0, 0, 0.3);
   }
+
   .nav-item:first-child {
     border-left: none
   }
+
   .nav-text {
     font-size: 14px;
     color: #FFFFFF
   }
+
   .nav-text-on {
     font-size: 14px;
     color: #ff9e18
