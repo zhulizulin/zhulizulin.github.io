@@ -49,11 +49,100 @@
     line-height: 1.4;
     font-size: 16px
   }
+  .pc-header {
+    display: none;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-left: 15px;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .pc-header-item {
+    height: 50px;
+    line-height: 50px;
+    width: 80px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    color: #ffffff;
+  }
+  .pc-header-item-on {
+    height: 50px;
+    line-height: 50px;
+    width: 80px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    color: #ffffff;
+    background: #FFFFFF;
+    color: #ff9e18;
+  }
+/**phone*/
+@media screen and (min-width:320px) and (max-width:767px) {}
+
+
+/**pad*/
+@media screen and (min-width:768px) and (max-width:1024px) {
+  body {
+    text-align: center;
+
+  }
+
+  .container {
+    display: inline-block;
+    width: 80%;
+  }
+
+  .product-header {
+    display: none
+  }
+
+  .product-item {
+    width: 33.33%;
+  }
+}
+
+/**pc*/
+@media screen and (min-width: 1024px) {
+  body {
+    text-align: center;
+  }
+
+  .container {
+    display: inline-block;
+    width: 80%;
+  }
+
+  .product-header {
+    display: none
+  }
+
+  .pc-header {
+    display: block
+  }
+
+  .bottom-nav {
+    display: none
+  }
+
+  .product-item {
+    width: 25%;
+  }
+  section {
+    text-align: left;
+  }
+}
 </style>
 
 <body>
-
-  <div class="title">迁安市筑力租赁站</div>
+  <div class="pc-header">
+    <a class="pc-header-item" href="./index.html">首页</a>
+    <a class="pc-header-item" href="tel:13400457746">电话</a>
+    <a class="pc-header-item" href="./address.html">地图</a>
+    <a class="pc-header-item-on" >关于</a>
+  </div>
+  <div class="title">筑力建筑设备租赁</div>
   <section>
     <div class="content">
       <p>迁安筑力是一家建筑材料租赁站，经过十多年的经营发展积累了丰富的经验和资金实力。我们的经营理念“质量产品至上，打造世纪精品”以高度社会责任感的形象面向社会，以优质、创新、诚信服务于社会。 </p>
