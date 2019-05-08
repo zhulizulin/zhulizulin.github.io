@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta name="description" content="专业租赁建筑材料">
+  <title>迁安筑力租赁站</title>
+</head>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: #333333;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:linked,
+  a:visited {
+    color: auto;
+  }
+
+  .title {
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .product {
+    padding: 7.5px;
+    overflow: hidden;
+  }
+
+  .product-item {
+    padding: 7.5px;
+    float: left;
+    width: 50%
+  }
+
+  .card {
+    background: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px #f2f2f2, -1px -1px 1px #f2f2f2;
+  }
+
+  .card-thumb-wrap {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+  }
+
+  .card-thumb-wrap>img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  p {
+    text-indent: 32px;
+    line-height: 1.4;
+    font-size: 16px
+  }
+
+  .pc-header {
+    display: none;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-left: 15px;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .pc-header-item {
+    height: 50px;
+    line-height: 50px;
+    width: 80px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    color: #ffffff;
+  }
+
+  .pc-header-item-on {
+    height: 50px;
+    line-height: 50px;
+    width: 80px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    color: #ffffff;
+    background: #FFFFFF;
+    color: #ff9e18;
+  }
+
+  /**phone*/
+  @media screen and (min-width:320px) and (max-width:767px) {}
+
+
+  /**pad*/
+  @media screen and (min-width:768px) and (max-width:1024px) {
+    body {
+      text-align: center;
+
+    }
+
+    .container {
+      display: inline-block;
+      width: 80%;
+    }
+
+    .product-header {
+      display: none
+    }
+
+    .product-item {
+      width: 33.33%;
+    }
+  }
+
+  /**pc*/
+  @media screen and (min-width: 1024px) {
+    body {
+      text-align: center;
+    }
+
+    .container {
+      display: inline-block;
+      width: 80%;
+    }
+
+    .product-header {
+      display: none
+    }
+
+    .pc-header {
+      display: block
+    }
+
+    .bottom-nav {
+      display: none
+    }
+
+    .product-item {
+      width: 25%;
+    }
+
+    section {
+      text-align: left;
+    }
+  }
+</style>
+
+<body>
+  <div class="pc-header">
+    <a class="pc-header-item" href="./index.html">首页</a>
+    <a class="pc-header-item" href="tel:13400457746">电话</a>
+    <a class="pc-header-item" href="./address.html">地图</a>
+    <a class="pc-header-item" href="./about.html">关于</a>
+  </div>
+  <div class="title">筑力建筑设备租赁</div>
+  <div class="product">
+    <a class="product-item">
+      <div class="card">
+        <div class="card-thumb-wrap">
+          <img src="./assets/gangguan/1.jpg">
+        </div>
+      </div>
+    </a>
+  </div>
+  <div style="height: 50px"></div>
+  <div class="bottom-nav">
+    <a class="nav-item" href="./index.html">
+      <img src="./assets/ic_home.png" />
+      <div class="nav-text">首页</div>
+    </a>
+    <a class="nav-item" href="tel:13400457746">
+      <img src="./assets/ic_phone.png" />
+      <div class="nav-text">电话</div>
+    </a>
+    <a class="nav-item" href="./address.html">
+      <img src="./assets/ic_address.png" />
+      <div class="nav-text">地图</div>
+    </a>
+    <a class="nav-item" href="./about.html">
+      <img src="./assets/ic_about.png" />
+      <div class="nav-text">关于</div>
+    </a>
+  </div>
+</body>
+<script>
+  window.onload = function() {
+    var hash = window.location.hash
+    var c = hash.substring(1)
+    let htmlString = ''
+    for(var i = 1; i <= 12; i ++) {
+      var imgUrl = `./assets/${c}/${i}.jpg`
+      htmlString += `<a class="product-item">
+        <div class="card">
+          <div class="card-thumb-wrap">
+            <img src="${imgUrl}">
+          </div>
+        </div>
+      </a>`
+    }
+    document.querySelector(".product").innerHTML = htmlString
+  }
+
+</script>
+<style>
+  .bottom-nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10000;
+  }
+
+  .nav-item {
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding-top: 5px;
+    height: 100%;
+    border-left: solid 1px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-item:first-child {
+    border-left: none
+  }
+
+  .nav-text {
+    font-size: 14px;
+    color: #FFFFFF
+  }
+
+  .nav-text-on {
+    font-size: 14px;
+    color: #ff9e18
+  }
+</style>
+
+</html>
