@@ -120,9 +120,15 @@
     </a>
   </div>
 </body>
-<script
-  src="https://webapi.amap.com/maps?v=1.4.10&key=de701c29e7e967f146cdf9028effa6de&plugin=AMap.Autocomplete"></script>
 <script>
+// 腾讯标注
+window.location.href="https://apis.map.qq.com/uri/v1/marker?marker=coord:40.039329,118.706019;title:迁安市筑力租赁站;addr:迁安筑力租赁站&referer=SC3BZ-MEX6U-QX5V4-BGCCW-ROOA6-5TBMM"
+</script>
+
+<!-- <script
+  src="https://webapi.amap.com/maps?v=1.4.10&key=de701c29e7e967f146cdf9028effa6de&plugin=AMap.Autocomplete"></script> -->
+
+<!-- <script>
   var lg = 118.706019;
   var la = 40.039329;
   var map = new AMap.Map("map", {
@@ -144,6 +150,37 @@
     window, location.href = "https://uri.amap.com/marker?position=" + lg + "," + la
   });
   map.add(marker);
+</script> -->
+
+<!-- <script charset="utf-8" crossorigin="anonymous" src="https://map.qq.com/api/js?v=2.exp&key=SC3BZ-MEX6U-QX5V4-BGCCW-ROOA6-5TBMM"></script> -->
+<script>
+(function init() {
+  // var lg = 118.706019;
+  // var la = 40.039329;
+  // var center = new qq.maps.LatLng(la, lg);
+  // var map = new qq.maps.Map(document.getElementById("map"), {
+  //     // 地图的中心地理坐标。
+  //     center: center,
+  //     zoom: 13
+  // });
+
+  // var marker = new qq.maps.Marker({
+  //   position: center,
+  //   map: map,
+  //   content: "迁安筑力租赁站"
+  // });
+
+  // var info = new qq.maps.InfoWindow({
+  //   map: map
+  // });
+  // qq.maps.event.addListener(marker, 'click', function() {
+  //   info.open();
+  //   info.setContent('<div style="text-align:center;white-space:nowrap;'+
+  //   'margin:10px;">单击标记</div>');
+  //   info.setPosition(center);
+  // });
+  
+})()
 </script>
 <style>
   .bottom-nav {
